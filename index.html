@@ -47,42 +47,124 @@
             Navbar bootstrap TODO ORHAN
 ###############################################################################################################################-->
 		<header>
-<nav class="navbar navbar-expand-md navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
+
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+  <a class="navbar-brand"> <img src="img/logo.png" width="40" height="40" alt="Logonavbar"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+          <ul class="navbar-nav mr-auto ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Concept</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Menu</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="#">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Find us</a>
+            </li>
+          </ul>
+            <li>
+            <!-- Button trigger modal -->
+              <button type="button" class="btn btn-outline-secondary my-2 my-sm-0 ml-auto" data-toggle="modal" data-target="#bookatable">Make a reservation
+              </button>
+            </li>
   </div>
 </nav>
+
 		</header>
+
+<!-- Modal -->
+<div class="modal fade" id="bookatable" tabindex="-1" role="dialog" aria-labelledby="bookatableform" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="bookatableform">Reserve a table at The Market Tavern</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+                  <form>
+                    <p class="modal-title"><u>BOOKING INFORMATIONS</u></p><br>
+                      <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                          <label for="datereservation">Date booking</label>
+                          <input type="text" class="date-form" id="datereservation" placeholder="jj/mm/aaaa">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                          <label for="timereservation">Reservation time</label>
+                          <input type="text" class="time-form" id="timereservation" placeholder="7 p.m">
+                        </div>
+                         <div class="col-md-4 mb-3">
+                          <label for="numbersofpersonnes">Number of personnes</label>
+                          <select type="text" class="personnes-form" id="numbersofpersonnes" placeholder="4">
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                              <option>6</option>
+                              <option>7</option>
+                              <option>8</option>
+                              <option>9</option>
+                              <option>10</option>
+                              <option>11</option>
+                              <option>12</option>
+                              <option>13</option>
+                              <option>14</option>
+                              <option>15</option>
+                              <option>16</option>
+                              <option>17</option>
+                              <option>18</option>
+                              <option>19</option>
+                              <option>20</option>
+                          </select>
+                        </div>
+                        
+                      </div>
+                    <p class="modal-title"><u>CONTACT INFORMATIONS</u></p>
+                     <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="recipient-name" class="col-form-label">First Name</label>
+                            <input type="text" class="form-control" id="recipient-name" placeholder="Elisa">
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="recipient-name" class="col-form-label">Last Name</label>
+                            <input type="text" class="form-control" id="recipient-name" placeholder="Etcheverry">
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="inputEmail4" class="col-form-label">Email</label>
+                            <input type="text" class="form-control" id="inputEmail4" placeholder="elisa@wildcodeschool.fr">
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="inputnumber" class="col-form-label">Phone number</label>
+                            <input type="text" class="form-control" id="inputnumber" placeholder="06 06 06 06 06">
+                          </div>
+                        </div>
+                          <div class="form-group">
+                            <label for="message-text" class="col-form-label">Message:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                          </div>
+                    </div>
+                  </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-secondary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- #############################################################################################################################
             End of Navbar bootstrap TODO ORHAN
 ###############################################################################################################################-->
@@ -454,7 +536,47 @@
 
 </section>
 
-<section id="evenements">
+<section id="evenements" class="container">
+
+<!-- Carousel Events ------------------------------------------------------------------------------------------------------------- -->
+
+  <div class="row">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="img/1.png" alt="Amis heureux">
+          <div class="carousel-caption d-none d-md-block">
+          <button type="button" class="btn btn-outline-secondary">More events</button> 
+          </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="img/2.png" alt="Second slide">
+          <div class="carousel-caption d-none d-md-block">
+          <button type="button" class="btn btn-outline-secondary">More events</button> 
+          </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="img/3.png" alt="Third slide">
+          <div class="carousel-caption d-none d-md-block">
+          <button type="button" class="btn btn-outline-secondary">More events</button> 
+          </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
 
 </section>
 

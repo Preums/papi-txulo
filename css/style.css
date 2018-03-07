@@ -64,4 +64,8 @@ section:nth-of-type(even){
 
 }
 
+.navbar li {
+  list-style: none;
+}
+
 
