@@ -10,11 +10,13 @@
 <!--[if gt IE 9]><!-->
 <html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
   <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/controler.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
-    <link rel="pingback" href="http://themarkettavernbordeaux.com/xmlrpc.php">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>The Bordeaux GastroPub - The Market Tavern Bordeaux</title>
 
@@ -39,9 +41,9 @@
   </head>
 
 	<body>
-<!-- -----------------------------------------------------------------------------------------------------------------------------
- 						Navbar bootstrap TODO ORHAN
---------------------------------------------------------------------------------------------------------------------------- -->
+<!-- #############################################################################################################################
+            Navbar bootstrap TODO ORHAN
+###############################################################################################################################-->
 		<header>
 <nav class="navbar navbar-expand-md navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
@@ -79,13 +81,13 @@
   </div>
 </nav>
 		</header>
-<!-- -----------------------------------------------------------------------------------------------------------------------------
- 						End of Navbar bootstrap TODO ORHAN
---------------------------------------------------------------------------------------------------------------------------- -->
+<!-- #############################################################################################################################
+            End of Navbar bootstrap TODO ORHAN
+###############################################################################################################################-->
 
-<!-- -----------------------------------------------------------------------------------------------------------------------------
- 						Carousel bootstrap TODO FRED
---------------------------------------------------------------------------------------------------------------------------- -->
+<!-- #############################################################################################################################
+            Carousel bootstrap TODO FRED
+###############################################################################################################################-->
 
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
@@ -108,16 +110,15 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-<!-- -----------------------------------------------------------------------------------------------------------------------------
- 						End of Carousel bootstrap TODO FRED
-
----------------------------------------------------------------------------------------------------------------------------  -->
-
+<!-- #############################################################################################################################
+            End of Carousel bootstrap TODO FRED
+###############################################################################################################################-->
 
 
-<!-- -----------------------------------------------------------------------------------------------------------------------------
- 						Sections JEROME
---------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- #############################################################################################################################
+            Sections JEROME
+###############################################################################################################################-->
 
       <section id="concept" class="container">
 
@@ -142,251 +143,313 @@
             <p>Cumque pertinacius ut legum gnarus accusatorem flagitaret atque sollemnia, doctus id Caesar libertatemque superbiam ratus tamquam obtrectatorem audacem excarnificari praecepit, qui ita evisceratus ut cruciatibus membra deessent, inplorans caelo iustitiam, torvum renidens fundato pectore mansit inmobilis nec se incusare nec quemquam alium passus et tandem nec confessus nec confutatus cum abiecto consorte poenali est morte multatus. et ducebatur intrepidus temporum iniquitati insultans, imitatus Zenonem illum veterem Stoicum qui ut mentiretur quaedam laceratus diutius, avulsam sedibus linguam suam cum cruento sputamine in oculos interrogantis Cyprii regis inpegit.</p>
           </article>
         </div>
-<!-- Deux sections à mettre en place avec les valeurs:
-			- Gastronomie
-			- Convivialité -->
 
 		</section>
-<!-- -----------------------------------------------------------------------------------------------------------------------------
- 						End of Sections TODO JEROME
--------------------------------------------------------------------------------------------------------------------------- -->
+<!-- #############################################################################################################################
+            End of Sections TODO JEROME
+###############################################################################################################################-->
 
 
-<!-- -----------------------------------------------------------------------------------------------------------------------------
- 						Menu TODO LOIC
--------------------------------------------------------------------------------------------------------------------------- -->
-<section id="menu">
-<!-- fenetre modal des starters -->
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#starters">
-  Starters
-</button>
+<!-- #############################################################################################################################
+             						Menu TODO LOIC
+###############################################################################################################################-->
+<section id="menu" class="container">
+  <article id="mainMenu">
+  <!-- fenetre modal des starters -->
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#starters">
+    Starters
+  </button>
 
-<!-- Modal -->
-<div class="modal fade" id="starters" tabindex="-1" role="dialog" aria-labelledby="startersCard" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="startersCard">STARTERS</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <table>              
-        </table>
-       <script>
-          $.getJSON("js/starters.json", function( data ) {
-          var items = [];
-          $.each( data, function( key, val ) {
-            if (val.vegetarian==="true") {
-              items.push( '<tr><td>' + val.name + ' <img src="img/vLogo.png" alt="Vegetarian logo"></td><td>' + val.price + '</td></tr>' + '<tr><td>' + val.description +'</td></tr>' );
-            }
-            else {
-              items.push( "<tr><td>" + val.name + "</td><td>" + val.price + "</td></tr>" + "<tr><td>" + val.description +"</td></tr>" );  
-            }
-          });
-         
-          $( "<table/>", {
-            "class": "my-new-table",
-            html: items.join( "" )
-          }).appendTo( "#starters  table" );
-        });
-       </script>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  <!-- Modal -->
+  <div class="modal fade" id="starters" tabindex="-1" role="dialog" aria-labelledby="startersCard" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="startersCard">STARTERS</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table>              
+          </table>
+         <script>
+            menuTable("starters");
+         </script>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-custom-secondary" data-dismiss="modal">Close</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<!-- fin de la fenetre modal des starters -->
+  <!-- fin de la fenetre modal des starters -->
 
-<!-- fenetre modal des sharingPlatters -->
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sharingPlatters">
-  sharingPlatters
-</button>
+  <!-- fenetre modal des sharingPlatters -->
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#sharingPlatters">
+    sharingPlatters
+  </button>
 
-<!-- Modal -->
-<div class="modal fade" id="sharingPlatters" tabindex="-1" role="dialog" aria-labelledby="sharingPlattersCard" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="sharingPlattersCard">Sharing Platters</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <table>              
-        </table>
-       <script>
-          $.getJSON("js/sharingPlatters.json", function( data ) {
-          var items = [];
-          $.each( data, function( key, val ) {
-            if (val.vegetarian==="true") {
-              items.push( '<tr><td>' + val.name + ' <img src="img/vLogo.png" alt="Vegetarian logo"></td><td>' + val.price + '</td></tr>' + '<tr><td>' + val.description +'</td></tr>' );
-            }
-            else {
-              items.push( "<tr><td>" + val.name + "</td><td>" + val.price + "</td></tr>" + "<tr><td>" + val.description +"</td></tr>" );  
-            }
-          });
-         
-          $( "<table/>", {
-            "class": "my-new-table",
-            html: items.join( "" )
-          }).appendTo( "#sharingPlatters table" );
-        });
-       </script>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  <!-- Modal -->
+  <div class="modal fade" id="sharingPlatters" tabindex="-1" role="dialog" aria-labelledby="sharingPlattersCard" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="sharingPlattersCard">Sharing Platters</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table>              
+          </table>
+         <script>
+          menuTable("sharingPlatters");
+         </script>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-custom-secondary" data-dismiss="modal">Close</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<!-- fin de la fenetre modal des sharingPlatters -->
+  <!-- fin de la fenetre modal des sharingPlatters -->
 
 
-<!-- fin de la fenetre modal des MTSignatureBurgers -->
-<!-- fenetre modal des MTSignatureBurgers -->
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#MTSignatureBurgers">
-  MT Signature Burgers
-</button>
+  <!-- fenetre modal des MTSignatureBurgers -->
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#MTSignatureBurgers">
+    MT Signature Burgers
+  </button>
 
-<!-- Modal -->
-<div class="modal fade" id="MTSignatureBurgers" tabindex="-1" role="dialog" aria-labelledby="MTSignatureBurgersCard" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="mainsCard">MT Signature Burgers</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <table>              
-        </table>
-       <script>
-          $.getJSON("js/MTSignatureBurgers.json", function( data ) {
-          var items = [];
-          $.each( data, function( key, val ) {
-            if (val.vegetarian==="true") {
-              items.push( '<tr><td>' + val.name + ' <img src="img/vLogo.png" alt="Vegetarian logo"></td><td>' + val.price + '</td></tr>' + '<tr><td>' + val.description +'</td></tr>' );
-            }
-            else {
-              items.push( "<tr><td>" + val.name + "</td><td>" + val.price + "</td></tr>" + "<tr><td>" + val.description +"</td></tr>" );  
-            }
-          });
-         
-          $( "<table/>", {
-            "class": "my-new-table",
-            html: items.join( "" )
-          }).appendTo( "#MTSignatureBurgers table" );
-        });
-       </script>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  <!-- Modal -->
+  <div class="modal fade" id="MTSignatureBurgers" tabindex="-1" role="dialog" aria-labelledby="MTSignatureBurgersCard" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="mainsCard">MT Signature Burgers</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table>              
+          </table>
+         <script>
+            menuTable("MTSignatureBurgers");
+         </script>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-custom-secondary" data-dismiss="modal">Close</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<!-- fin de la fenetre modal des MTSignatureBurgers -->
+  <!-- fin de la fenetre modal des MTSignatureBurgers -->
 
-<!-- fenetre modal des mains -->
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mains">
-  Mains
-</button>
+  <!-- fenetre modal des mains -->
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#mains">
+    Mains
+  </button>
 
-<!-- Modal -->
-<div class="modal fade" id="mains" tabindex="-1" role="dialog" aria-labelledby="mainsCard" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="mainsCard">Mains</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <table>              
-        </table>
-       <script>
-          $.getJSON("js/mains.json", function( data ) {
-          var items = [];
-          $.each( data, function( key, val ) {
-            if (val.vegetarian==="true") {
-              items.push( '<tr><td>' + val.name + ' <img src="img/vLogo.png" alt="Vegetarian logo"></td><td>' + val.price + '</td></tr>' + '<tr><td>' + val.description +'</td></tr>' );
-            }
-            else {
-              items.push( "<tr><td>" + val.name + "</td><td>" + val.price + "</td></tr>" + "<tr><td>" + val.description +"</td></tr>" );  
-            }
-          });
-         
-          $( "<table/>", {
-            "class": "my-new-table",
-            html: items.join( "" )
-          }).appendTo( "#mains table" );
-        });
-       </script>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  <!-- Modal -->
+  <div class="modal fade" id="mains" tabindex="-1" role="dialog" aria-labelledby="mainsCard" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="mainsCard">Mains</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table>              
+          </table>
+         <script>
+           menuTable("mains");
+         </script>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-custom-secondary" data-dismiss="modal">Close</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<!-- fin de la fenetre modal des desserts -->
+  <!-- fin de la fenetre modal des desserts -->
 
-<!-- fenetre modal des desserts -->
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#desserts">
-  Desserts
-</button>
+  <!-- fenetre modal des desserts -->
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#desserts">
+    Desserts
+  </button>
 
-<!-- Modal -->
-<div class="modal fade" id="desserts" tabindex="-1" role="dialog" aria-labelledby="mainsCard" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="dessertsCard">Desserts</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <table>              
-        </table>
-       <script>
-          $.getJSON("js/desserts.json", function( data ) {
-          var items = [];
-          $.each( data, function( key, val ) {
-            if (val.vegetarian==="true") {
-              items.push( '<tr><td>' + val.name + ' <img src="img/vLogo.png" alt="Vegetarian logo"></td><td>' + val.price + '</td></tr>' + '<tr><td>' + val.description +'</td></tr>' );
-            }
-            else {
-              items.push( "<tr><td>" + val.name + "</td><td>" + val.price + "</td></tr>" + "<tr><td>" + val.description +"</td></tr>" );  
-            }
-          });
-         
-          $( "<table/>", {
-            "class": "my-new-table",
-            html: items.join( "" )
-          }).appendTo( "#desserts table" );
-        });
-       </script>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  <!-- Modal -->
+  <div class="modal fade" id="desserts" tabindex="-1" role="dialog" aria-labelledby="mainsCard" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="dessertsCard">Desserts</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table>              
+          </table>
+         <script>
+            menuTable("desserts");
+         </script>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-custom-secondary" data-dismiss="modal">Close</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<!-- fin de la fenetre modal des desserts -->
+  <!-- fin de la fenetre modal des desserts -->
+</article>
+
+<article>
+  <header>
+    <img src="img/BRUNCH-logo.jpg" alt="Logo for brunch time">
+      Le Brunch du Market Tavern est servi le dimanche de 11h à 15h !
+  </header>
+
+</article id="brunchMenu">
+<!-- fenetre modal du brunch -->
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#brunch">
+    Brunch
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="brunch" tabindex="-1" role="dialog" aria-labelledby="brunchCard" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="brunchCard">BRUNCH</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table>              
+          </table>
+         <script>
+            menuTable("brunch");
+         </script>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-custom-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin de la fenetre modal du brunch -->
+
+<!-- fenetre modal du menu kids -->
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#kids">
+    Kids Menu
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="kids" tabindex="-1" role="dialog" aria-labelledby="kidsCard" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="kidsCard">KIDS MENU</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table>              
+          </table>
+         <script>
+            menuTable("kids");
+         </script>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-custom-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin de la fenetre modal du menu kids -->
+
+<!-- fenetre modal du menu MTSignatureBurgersBrunch -->
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#MTSignatureBurgersBrunch">
+    MT Signature Burgers
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="MTSignatureBurgersBrunch" tabindex="-1" role="dialog" aria-labelledby="MTSignatureBurgersBrunchCard" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="MTSignatureBurgersBrunchCard">MT Signature Burgers Brunch</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table>              
+          </table>
+         <script>
+            menuTable("MTSignatureBurgersBrunch");
+         </script>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-custom-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin de la fenetre modal du menu MTSignatureBurgersBrunch -->
+
+<!-- fenetre modal du menu dessertsBrunch -->
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#dessertsBrunch">
+    Desserts
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="dessertsBrunch" tabindex="-1" role="dialog" aria-labelledby="dessertsBrunchCard" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="dessertsBrunchCard">MT Signature Burgers Brunch</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table>              
+          </table>
+         <script>
+            menuTable("dessertsBrunch");
+         </script>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-custom-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin de la fenetre modal du menu dessertsBrunch -->
+<footer>
+  <p>Les viandes sont d'origine UE</p>
+  <p>Demander pour la liste des allergènes e nos repas à nos serveurs. Tous les prix sont TTC.</p>
+</footer>
+<article>
+  
+
+</article id="drinksMenu">
 
 </section>
 
@@ -404,43 +467,45 @@
   <img src="img/logo.png" alt="The market Tavern Logo">
 </div>
 <div class="col-12 col-lg-4">
-  <table>
-    <thead>
-    <tr>
-      <th colspan2>Horaires d'ouverture</th>
-    </tr>
-  </thead>
-    <tbody>
-    <tr>
-      <td>Lundi</td>
-      <td>11h - 00h</td>
-    </tr>
-    <tr>
-      <td>Mardi</td>>
-      <td>11h - 00h</td>>
-    </tr>
-    <tr>
-      <td>Mercredi</td>>
-      <td>11h - 00h</td>>
-    </tr>
-    <tr>
-      <td>Jeudi</td>>
-      <td>11h - 00h</td>>
-    </tr>
-    <tr>
-      <td>Vendredi</td>>
-      <td>11h - 00h</td>>
-    </tr>
-    <tr>
-      <td>Samedi</td>>
-      <td>11h - 00h</td>>
-    </tr>
-    <tr>
-      <td>Dimanche</td>>
-      <td>11h - 00h</td>>
-    </tr>
-  </tbody>
-  </table>
+      <table>
+        <thead>
+        <tr>
+          <th colspan="2">Horaires d'ouverture</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Lundi</td>
+          <td>11h - 00h</td>
+        </tr>
+        <tr>
+          <td>Mardi</td>
+          <td>11h - 00h</td>
+        </tr>
+        <tr>
+          <td>Mercredi</td>
+          <td>11h - 00h</td>
+        </tr>
+        <tr>
+          <td>Jeudi</td>
+          <td>11h - 00h</td>
+        </tr>
+        <tr>
+          <td>Vendredi</td>
+          <td>11h - 00h</td>
+        </tr>
+        <tr>
+          <td>Samedi</td>
+          <td>11h - 00h</td>
+        </tr>
+        <tr>
+          <td>Dimanche</td>
+          <td>11h - 00h</td>
+        </tr>
+      </tbody>
+        
+      </table>
+  
 </div>
 <div class="col-12 col-lg-4">
 <h4>Nous Contacter</h4>
@@ -449,11 +514,10 @@
   </div>
 
     <p>copyright, papi txulo</p>
-<!-- -----------------------------------------------------------------------------------------------------------------------------
+<!-- #############################################################################################################################
  						End of Menu TODO LOIC
--------------------------------------------------------------------------------------------------------------------------- -->
+###############################################################################################################################-->
 </footer>
-
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
