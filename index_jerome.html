@@ -10,7 +10,6 @@
 <!--[if gt IE 9]><!-->
 <html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
   <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
@@ -43,7 +42,7 @@
  						Navbar bootstrap TODO ORHAN
 --------------------------------------------------------------------------------------------------------------------------- -->
 		<header>
-<nav class="navbar navbar-expand-md navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -156,238 +155,48 @@
  						Menu TODO LOIC
 -------------------------------------------------------------------------------------------------------------------------- -->
 <section id="menu">
-<!-- fenetre modal des starters -->
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#starters">
-  Starters
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#menuCard">
+  Consultez notre carte
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="starters" tabindex="-1" role="dialog" aria-labelledby="startersCard" aria-hidden="true">
+<div class="modal fade" id="menuCard" tabindex="-1" role="dialog" aria-labelledby="menuCardTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="startersCard">STARTERS</h5>
+        <h5 class="modal-title" id="menuCardTitle">Notre menu</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <table>              
-        </table>
-       <script>
-          $.getJSON("js/starters.json", function( data ) {
-          var items = [];
-          $.each( data, function( key, val ) {
-            if (val.vegetarian==="true") {
-              items.push( '<tr><td>' + val.name + ' <img src="img/vLogo.png" alt="Vegetarian logo"></td><td>' + val.price + '</td></tr>' + '<tr><td>' + val.description +'</td></tr>' );
-            }
-            else {
-              items.push( "<tr><td>" + val.name + "</td><td>" + val.price + "</td></tr>" + "<tr><td>" + val.description +"</td></tr>" );  
-            }
-          });
-         
-          $( "<table/>", {
-            "class": "my-new-table",
-            html: items.join( "" )
-          }).appendTo( "#starters  table" );
-        });
-       </script>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
+        <div class="row">
+          <div class="col-12 col-lg-4">
+            <h2>Cocktails</h2>
+            <h2>Pint Cocktails</h2>
+          </div>
+          <div class="col-12 col-lg-4">
+            <h4>Apéritifs<span class="glass-size">(4cl)</span></h4>
+            <h4>Digestifs<span class="glass-size">(4cl)</span></h4>
+            <h4>Other spirits</h4>
+            <h2>Shots</h2>
+          </div>
+          <div class="col-12 col-lg-4">
+            <h2>Spitits<span class="glass-size">(4cl)</span></h2>
+            <h5>-Rum-</h5>
+            <h5>-Vodka-</h5>
+            <h5>-Gin-</h5>
+            <h5>-Tequila-</h5>
+            <h5>-Whiskey-</h5>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
 </div>
-<!-- fin de la fenetre modal des starters -->
-
-<!-- fenetre modal des sharingPlatters -->
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sharingPlatters">
-  sharingPlatters
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="sharingPlatters" tabindex="-1" role="dialog" aria-labelledby="sharingPlattersCard" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="sharingPlattersCard">Sharing Platters</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <table>              
-        </table>
-       <script>
-          $.getJSON("js/sharingPlatters.json", function( data ) {
-          var items = [];
-          $.each( data, function( key, val ) {
-            if (val.vegetarian==="true") {
-              items.push( '<tr><td>' + val.name + ' <img src="img/vLogo.png" alt="Vegetarian logo"></td><td>' + val.price + '</td></tr>' + '<tr><td>' + val.description +'</td></tr>' );
-            }
-            else {
-              items.push( "<tr><td>" + val.name + "</td><td>" + val.price + "</td></tr>" + "<tr><td>" + val.description +"</td></tr>" );  
-            }
-          });
-         
-          $( "<table/>", {
-            "class": "my-new-table",
-            html: items.join( "" )
-          }).appendTo( "#sharingPlatters table" );
-        });
-       </script>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- fin de la fenetre modal des sharingPlatters -->
-
-
-<!-- fin de la fenetre modal des MTSignatureBurgers -->
-<!-- fenetre modal des MTSignatureBurgers -->
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#MTSignatureBurgers">
-  MT Signature Burgers
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="MTSignatureBurgers" tabindex="-1" role="dialog" aria-labelledby="MTSignatureBurgersCard" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="mainsCard">MT Signature Burgers</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <table>              
-        </table>
-       <script>
-          $.getJSON("js/MTSignatureBurgers.json", function( data ) {
-          var items = [];
-          $.each( data, function( key, val ) {
-            if (val.vegetarian==="true") {
-              items.push( '<tr><td>' + val.name + ' <img src="img/vLogo.png" alt="Vegetarian logo"></td><td>' + val.price + '</td></tr>' + '<tr><td>' + val.description +'</td></tr>' );
-            }
-            else {
-              items.push( "<tr><td>" + val.name + "</td><td>" + val.price + "</td></tr>" + "<tr><td>" + val.description +"</td></tr>" );  
-            }
-          });
-         
-          $( "<table/>", {
-            "class": "my-new-table",
-            html: items.join( "" )
-          }).appendTo( "#MTSignatureBurgers table" );
-        });
-       </script>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- fin de la fenetre modal des MTSignatureBurgers -->
-
-<!-- fenetre modal des mains -->
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mains">
-  Mains
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="mains" tabindex="-1" role="dialog" aria-labelledby="mainsCard" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="mainsCard">Mains</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <table>              
-        </table>
-       <script>
-          $.getJSON("js/mains.json", function( data ) {
-          var items = [];
-          $.each( data, function( key, val ) {
-            if (val.vegetarian==="true") {
-              items.push( '<tr><td>' + val.name + ' <img src="img/vLogo.png" alt="Vegetarian logo"></td><td>' + val.price + '</td></tr>' + '<tr><td>' + val.description +'</td></tr>' );
-            }
-            else {
-              items.push( "<tr><td>" + val.name + "</td><td>" + val.price + "</td></tr>" + "<tr><td>" + val.description +"</td></tr>" );  
-            }
-          });
-         
-          $( "<table/>", {
-            "class": "my-new-table",
-            html: items.join( "" )
-          }).appendTo( "#mains table" );
-        });
-       </script>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- fin de la fenetre modal des desserts -->
-
-<!-- fenetre modal des desserts -->
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#desserts">
-  Desserts
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="desserts" tabindex="-1" role="dialog" aria-labelledby="mainsCard" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="dessertsCard">Desserts</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <table>              
-        </table>
-       <script>
-          $.getJSON("js/desserts.json", function( data ) {
-          var items = [];
-          $.each( data, function( key, val ) {
-            if (val.vegetarian==="true") {
-              items.push( '<tr><td>' + val.name + ' <img src="img/vLogo.png" alt="Vegetarian logo"></td><td>' + val.price + '</td></tr>' + '<tr><td>' + val.description +'</td></tr>' );
-            }
-            else {
-              items.push( "<tr><td>" + val.name + "</td><td>" + val.price + "</td></tr>" + "<tr><td>" + val.description +"</td></tr>" );  
-            }
-          });
-         
-          $( "<table/>", {
-            "class": "my-new-table",
-            html: items.join( "" )
-          }).appendTo( "#desserts table" );
-        });
-       </script>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- fin de la fenetre modal des desserts -->
-
 </section>
 
 <section id="evenements">
@@ -456,7 +265,6 @@
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 	</body>
 
