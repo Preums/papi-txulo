@@ -71,6 +71,11 @@ section:nth-of-type(even){
 }
 
 
+.btn.btn-outline-secondary{
+  background-color: #4b244a;
+}
+
+
 @media(min-width:992px){
 
   #concept .btn {
