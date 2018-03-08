@@ -16,3 +16,16 @@
             html: items.join( "" )
           }).appendTo( "#" +file+" table" );
         });}
+
+		function drinksMenuTable(file) {
+			$.getJSON("js/data/" +file+".json", function( data ) {
+          var items = [];
+		  $.each( data, function( key, val ) {
+		      items.push( "<tr><td>" + val.name + "</td><td>" + val.price + "</td></tr>" );  
+		 });
+		 
+		  $( "<table/>", {
+		    "class": "my-new-table",
+		    html: items.join( "" )
+		  }).appendTo( "#" +file+" table" );
+		});}
