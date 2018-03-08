@@ -32,6 +32,10 @@ body {
   font-size: 14px;
 }
 
+.navbar-nav.nav-fill.w-100.align-items-start {
+  margin-left: 20%;
+}
+
 .carousel-caption {
     background: rgba(0, 0, 0, 0.5);
 }
@@ -67,6 +71,10 @@ section:nth-of-type(even){
     margin-bottom: 20px;
   }
 
+}
+
+.navbar li {
+  list-style: none;
 }
 
 
