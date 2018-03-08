@@ -48,10 +48,10 @@
 <!-- #                       NavBar                         # -->
 <!-- ######################################################## -->
 
-		<header>
+		    <header>
 
 <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
-  <a class="navbar-brand"> <img src="img/logo.png" width="40" height="40" alt="Logonavbar"></a>
+  <a class="navbar-brand"> <img src="img/logo.png" width="60" height="60" alt="Logonavbar"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -73,19 +73,24 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Find us</a>
             </li>
+
           </ul>
+          
+            <li>
+              <img class="logo_nav_right" src="img/TextLogo.png" height="50" alt="Logo2navbar">
+            </li>
             <li>
             <!-- Button trigger modal -->
               <button type="button" class="btn btn-custom my-2 my-sm-0 ml-auto" data-toggle="modal" data-target="#bookatable">Make a reservation
               </button>
             </li>
+          
   </div>
 </nav>
 
-		</header>
+    </header>
 
-<!-- Modale "Book a table" -->
-
+<!-- Modal -->
 <div class="modal fade" id="bookatable" tabindex="-1" role="dialog" aria-labelledby="bookatableform" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
@@ -176,6 +181,11 @@
 <section class="container" id="banner">
   <div class="row">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
       <div class="carousel-inner">
           <div class="carousel-item active">
             <img class="d-block w-100" src="img/carousel_slide1_concept.jpeg" alt="First slide">
