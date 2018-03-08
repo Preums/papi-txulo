@@ -155,299 +155,183 @@
              						Menu TODO LOIC
 ###############################################################################################################################-->
 <section id="menu" class="container">
-  <article id="mainMenu">
-  <!-- fenetre modal des starters -->
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#starters">
-    Starters
-  </button>
 
-  <!-- Modal -->
-  <div class="modal fade" id="starters" tabindex="-1" role="dialog" aria-labelledby="startersCard" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="startersCard">STARTERS</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <table>
-          </table>
-         <script>
-            menuTable("starters");
-         </script>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-custom-secondary" data-dismiss="modal">Close</button>
+ <ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="mainMenu-tab" data-toggle="tab" href="#mainMenu" role="tab" aria-controls="mainMenu" aria-selected="true">Menu</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="drinksMenu-tab" data-toggle="tab" href="#drinksMenu" role="tab" aria-controls="drinksMenu" aria-selected="false">Drinks</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="brunchMenu-tab" data-toggle="tab" href="#brunchMenu" role="tab" aria-controls="brunchMenu" aria-selected="false">Brunch</a>
+  </li>
+</ul>
+
+<div class="tab-content" id="myTabContent">
+  <article class="tab-pane fade show active" id="mainMenu" role="tabpanel" aria-labelledby="mainMenu-tab">
+  <header>
+      <img src="img/flyingPig.png" alt="Logo of a flying pig">
+    </header>
+    <!-- fenetre modal des starters -->
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#starters">
+      Starters
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="starters" tabindex="-1" role="dialog" aria-labelledby="startersCard" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="startersCard">STARTERS</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table>
+            </table>
+           <script>
+              menuTable("starters");
+           </script>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-custom-secondary" data-dismiss="modal">Close</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- fin de la fenetre modal des starters -->
+    <!-- fin de la fenetre modal des starters -->
 
-  <!-- fenetre modal des sharingPlatters -->
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#sharingPlatters">
-    sharingPlatters
-  </button>
+    <!-- fenetre modal des sharingPlatters -->
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#sharingPlatters">
+      sharingPlatters
+    </button>
 
-  <!-- Modal -->
-  <div class="modal fade" id="sharingPlatters" tabindex="-1" role="dialog" aria-labelledby="sharingPlattersCard" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="sharingPlattersCard">Sharing Platters</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <table>
-          </table>
-         <script>
-          menuTable("sharingPlatters");
-         </script>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-custom-secondary" data-dismiss="modal">Close</button>
+    <!-- Modal -->
+    <div class="modal fade" id="sharingPlatters" tabindex="-1" role="dialog" aria-labelledby="sharingPlattersCard" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="sharingPlattersCard">Sharing Platters</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table>
+            </table>
+           <script>
+            menuTable("sharingPlatters");
+           </script>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-custom-secondary" data-dismiss="modal">Close</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- fin de la fenetre modal des sharingPlatters -->
+    <!-- fin de la fenetre modal des sharingPlatters -->
 
 
-  <!-- fenetre modal des MTSignatureBurgers -->
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#MTSignatureBurgers">
-    MT Signature Burgers
-  </button>
+    <!-- fenetre modal des MTSignatureBurgers -->
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#MTSignatureBurgers">
+      MT Signature Burgers
+    </button>
 
-  <!-- Modal -->
-  <div class="modal fade" id="MTSignatureBurgers" tabindex="-1" role="dialog" aria-labelledby="MTSignatureBurgersCard" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="mainsCard">MT Signature Burgers</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <table>
-          </table>
-         <script>
-            menuTable("MTSignatureBurgers");
-         </script>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-custom-secondary" data-dismiss="modal">Close</button>
+    <!-- Modal -->
+    <div class="modal fade" id="MTSignatureBurgers" tabindex="-1" role="dialog" aria-labelledby="MTSignatureBurgersCard" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="mainsCard">MT Signature Burgers</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table>
+            </table>
+           <script>
+              menuTable("MTSignatureBurgers");
+           </script>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-custom-secondary" data-dismiss="modal">Close</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- fin de la fenetre modal des MTSignatureBurgers -->
+    <!-- fin de la fenetre modal des MTSignatureBurgers -->
 
-  <!-- fenetre modal des mains -->
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#mains">
-    Mains
-  </button>
+    <!-- fenetre modal des mains -->
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#mains">
+      Mains
+    </button>
 
-  <!-- Modal -->
-  <div class="modal fade" id="mains" tabindex="-1" role="dialog" aria-labelledby="mainsCard" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="mainsCard">Mains</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <table>
-          </table>
-         <script>
-           menuTable("mains");
-         </script>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-custom-secondary" data-dismiss="modal">Close</button>
+    <!-- Modal -->
+    <div class="modal fade" id="mains" tabindex="-1" role="dialog" aria-labelledby="mainsCard" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="mainsCard">Mains</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table>
+            </table>
+           <script>
+             menuTable("mains");
+           </script>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-custom-secondary" data-dismiss="modal">Close</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- fin de la fenetre modal des desserts -->
+    <!-- fin de la fenetre modal des desserts -->
 
-  <!-- fenetre modal des desserts -->
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#desserts">
-    Desserts
-  </button>
+    <!-- fenetre modal des desserts -->
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#desserts">
+      Desserts
+    </button>
 
-  <!-- Modal -->
-  <div class="modal fade" id="desserts" tabindex="-1" role="dialog" aria-labelledby="mainsCard" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="dessertsCard">Desserts</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <table>
-          </table>
-         <script>
-            menuTable("desserts");
-         </script>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-custom-secondary" data-dismiss="modal">Close</button>
+    <!-- Modal -->
+    <div class="modal fade" id="desserts" tabindex="-1" role="dialog" aria-labelledby="mainsCard" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="dessertsCard">Desserts</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table>
+            </table>
+           <script>
+              menuTable("desserts");
+           </script>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-custom-secondary" data-dismiss="modal">Close</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <!-- fin de la fenetre modal des desserts -->
+
+    <!-- fin de la fenetre modal des desserts -->
 </article>
 
-<article>
-  <header>
-    <img src="img/BRUNCH-logo.jpg" alt="Logo for brunch time">
-      Le Brunch du Market Tavern est servi le dimanche de 11h à 15h !
-  </header>
+<article class="tab-pane fade" id="drinksMenu" role="tabpanel" aria-labelledby="drinksMenu-tab">
 
-</article id="brunchMenu">
-<!-- fenetre modal du brunch -->
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#brunch">
-    Brunch
-  </button>
-
-  <!-- Modal -->
-  <div class="modal fade" id="brunch" tabindex="-1" role="dialog" aria-labelledby="brunchCard" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="brunchCard">BRUNCH</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <table>
-          </table>
-         <script>
-            menuTable("brunch");
-         </script>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-custom-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- fin de la fenetre modal du brunch -->
-
-<!-- fenetre modal du menu kids -->
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#kids">
-    Kids Menu
-  </button>
-
-  <!-- Modal -->
-  <div class="modal fade" id="kids" tabindex="-1" role="dialog" aria-labelledby="kidsCard" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="kidsCard">KIDS MENU</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <table>
-          </table>
-         <script>
-            menuTable("kids");
-         </script>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-custom-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- fin de la fenetre modal du menu kids -->
-
-<!-- fenetre modal du menu MTSignatureBurgersBrunch -->
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#MTSignatureBurgersBrunch">
-    MT Signature Burgers
-  </button>
-
-  <!-- Modal -->
-  <div class="modal fade" id="MTSignatureBurgersBrunch" tabindex="-1" role="dialog" aria-labelledby="MTSignatureBurgersBrunchCard" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="MTSignatureBurgersBrunchCard">MT Signature Burgers Brunch</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <table>
-          </table>
-         <script>
-            menuTable("MTSignatureBurgersBrunch");
-         </script>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-custom-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- fin de la fenetre modal du menu MTSignatureBurgersBrunch -->
-
-<!-- fenetre modal du menu dessertsBrunch -->
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#dessertsBrunch">
-    Desserts
-  </button>
-
-  <!-- Modal -->
-  <div class="modal fade" id="dessertsBrunch" tabindex="-1" role="dialog" aria-labelledby="dessertsBrunchCard" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="dessertsBrunchCard">Desserts</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <table>
-          </table>
-         <script>
-            menuTable("dessertsBrunch");
-         </script>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-custom-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- fin de la fenetre modal du menu dessertsBrunch -->
-<footer>
-  <p>Les viandes sont d'origine UE</p>
-  <p>Demander pour la liste des allergènes e nos repas à nos serveurs. Tous les prix sont TTC.</p>
-</footer>
-<article id="drinksMenu">
 <!-- fenetre modal du menu cocktails -->
   <!-- Button trigger modal -->
   <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#cocktails">
@@ -634,24 +518,160 @@
   </div>
   <!-- fin de la fenetre modal du menu spirits -->
 
-</article>
+  </article>
+  <article class="tab-pane fade" id="brunchMenu" role="tabpanel" aria-labelledby="brunchMenu-tab">
+    <header>
+        <img src="img/brunchLogo.png" alt="Logo for brunch time">
+          Le Brunch du Market Tavern est servi le dimanche de 11h à 15h !
+      </header>
 
-</section>
+    <!-- fenetre modal du brunch -->
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#brunch">
+        Brunch
+      </button>
 
-<section id="evenements">
+      <!-- Modal -->
+      <div class="modal fade" id="brunch" tabindex="-1" role="dialog" aria-labelledby="brunchCard" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="brunchCard">BRUNCH</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table>
+              </table>
+             <script>
+                menuTable("brunch");
+             </script>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-custom-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- fin de la fenetre modal du brunch -->
 
-</section>
+    <!-- fenetre modal du menu kids -->
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#kids">
+        Kids Menu
+      </button>
 
-<section id="nousTrouver">
+      <!-- Modal -->
+      <div class="modal fade" id="kids" tabindex="-1" role="dialog" aria-labelledby="kidsCard" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="kidsCard">KIDS MENU</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table>
+              </table>
+             <script>
+                menuTable("kids");
+             </script>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-custom-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- fin de la fenetre modal du menu kids -->
 
-</section>
+    <!-- fenetre modal du menu MTSignatureBurgersBrunch -->
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#MTSignatureBurgersBrunch">
+        MT Signature Burgers
+      </button>
 
-<footer class="container">
-  <div class="row">
-    <div class="col-12 col-lg-4">
-  <img src="img/logo.png" alt="The market Tavern Logo">
-</div>
-<div class="col-12 col-lg-4">
+      <!-- Modal -->
+      <div class="modal fade" id="MTSignatureBurgersBrunch" tabindex="-1" role="dialog" aria-labelledby="MTSignatureBurgersBrunchCard" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="MTSignatureBurgersBrunchCard">MT Signature Burgers Brunch</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table>
+              </table>
+             <script>
+                menuTable("MTSignatureBurgersBrunch");
+             </script>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-custom-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- fin de la fenetre modal du menu MTSignatureBurgersBrunch -->
+
+    <!-- fenetre modal du menu dessertsBrunch -->
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#dessertsBrunch">
+        Desserts
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="dessertsBrunch" tabindex="-1" role="dialog" aria-labelledby="dessertsBrunchCard" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="dessertsBrunchCard">Desserts</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table>
+              </table>
+             <script>
+                menuTable("dessertsBrunch");
+             </script>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-custom-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- fin de la fenetre modal du menu dessertsBrunch -->
+    <footer>
+      <p>Les viandes sont d'origine UE</p>
+      <p>Demander pour la liste des allergènes e nos repas à nos serveurs. Tous les prix sont TTC.</p>
+    </footer>
+
+  </article>
+  </div>
+
+  </section>
+
+  <section id="evenements">
+
+  </section>
+
+  <section id="nousTrouver">
+
+  </section>
+
+  <footer class="container">
+    <div class="row">
+      <div class="col-12 col-lg-4">
+    <img src="img/logo.png" alt="The market Tavern Logo">
+  </div>
+  <div class="col-12 col-lg-4">
       <table>
         <thead>
         <tr>
