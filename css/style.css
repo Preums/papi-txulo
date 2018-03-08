@@ -30,6 +30,7 @@ h3 {
 body {
   background-color: #42253B;
   font-size: 14px;
+  padding-top: 66px;
 }
 
 .navbar-nav.nav-fill.w-100.align-items-start {
@@ -64,6 +65,16 @@ section:nth-of-type(even){
   color: #e3dfff;
 }
 
+#ourLocation {
+  padding-bottom: 1rem;
+  color: #e3dfff;
+  font-size: 1.2rem;
+}
+
+#ourLocation strong {
+  font-size: 2rem;
+  font-family: 'solid_antique_roman', Arial;
+}
 
 @media(min-width:992px){
 
