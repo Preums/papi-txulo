@@ -31,6 +31,7 @@ body {
   padding-top: 88px;
   background-color: #42253B;
   font-size: 14px;
+  padding-top: 66px;
 }
 
 .logo_nav_right{
@@ -70,6 +71,16 @@ section:nth-of-type(even){
   color: #e3dfff;
 }
 
+#ourLocation {
+  padding-bottom: 1rem;
+  color: #e3dfff;
+  font-size: 1.2rem;
+}
+
+#ourLocation strong {
+  font-size: 2rem;
+  font-family: 'solid_antique_roman', Arial;
+}
 
 .btn.btn-outline-secondary{
   background-color: #4b244a;
