@@ -66,11 +66,29 @@ section:nth-of-type(even){
   margin-bottom: 50px;
 }
 
-.btn-custom {
+.btn-custom,#menu .nav-tabs {
   background-color: #4b244a;
   color: #e3dfff;
 }
 
+#menu a {
+  color: #e3dfff;
+}
+#menu .nav-tabs .nav-link.active {
+  background-color:#e3dfff;
+  color:#4b244a;
+}
+#menu {
+  padding-bottom: 2rem;
+}
+#menu header {
+  margin-top: 1rem;
+}
+.modal-body {
+background-image: url("img/cornerTL.png"), url("img/sideX.png"), url("img/cornerTR.png"), url("img/sideY.png"), url("img/cornerBR.png"),url("img/sideX.png"),url("cornerBL.png"),url("sideY.png");
+background-position: top, top, top, right, bottom, bottom, bottom, bottom, left;
+background-repeat: no-repeat, repeat, no-repeat, repeat, no-repeat, repeat, no-repeat,repeat;
+}
 #ourLocation {
   padding-bottom: 1rem;
   color: #e3dfff;
@@ -86,7 +104,6 @@ section:nth-of-type(even){
   background-color: #4b244a;
 }
 
-
 @media(min-width:992px){
 
   #concept .btn {
@@ -98,6 +115,3 @@ section:nth-of-type(even){
 .navbar li {
   list-style: none;
 }
-
-
-
