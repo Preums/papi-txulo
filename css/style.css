@@ -78,8 +78,17 @@ section:nth-of-type(even){
   background-color:#e3dfff;
   color:#4b244a;
 }
-
-
+#menu {
+  padding-bottom: 2rem;
+}
+#menu header {
+  margin-top: 1rem;
+}
+.modal-body {
+background-image: url("img/cornerTL.png"), url("img/sideX.png"), url("img/cornerTR.png"), url("img/sideY.png"), url("img/cornerBR.png"),url("img/sideX.png"),url("cornerBL.png"),url("sideY.png");
+background-position: top, top, top, right, bottom, bottom, bottom, bottom, left;
+background-repeat: no-repeat, repeat, no-repeat, repeat, no-repeat, repeat, no-repeat,repeat;
+}
 #ourLocation {
   padding-bottom: 1rem;
   color: #e3dfff;
