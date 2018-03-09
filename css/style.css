@@ -36,8 +36,14 @@ body {
   margin-left: 20%;
 }
 
-.carousel-caption {
-    background: rgba(0, 0, 0, 0.5);
+.carousel-caption h2{
+    text-shadow: 1px 1px black;
+}
+
+.carousel-caption h2{
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: initial;
 }
 
 section:nth-of-type(odd){
