@@ -31,7 +31,6 @@ body {
   padding-top: 88px;
   background-color: #42253B;
   font-size: 14px;
-  padding-top: 66px;
 }
 
 .logo_nav_right{
@@ -66,9 +65,10 @@ section:nth-of-type(even){
   margin-bottom: 50px;
 }
 
-.btn-custom,#menu .nav-tabs {
+.btn-custom, #menu .nav-tabs {
   background-color: #4b244a;
   color: #e3dfff;
+  border: solid 1px #574a54;
 }
 
 #menu a {
