@@ -28,12 +28,19 @@ h3 {
 }
 
 body {
+  padding-top: 88px;
   background-color: #42253B;
   font-size: 14px;
+  padding-top: 66px;
+}
+
+.logo_nav_right{
+  padding-right: 20px;
+  padding-top: 3px;
 }
 
 .navbar-nav.nav-fill.w-100.align-items-start {
-  margin-left: 20%;
+  margin-left: 0;
 }
 
 .carousel-caption h2{
@@ -65,11 +72,34 @@ section:nth-of-type(even){
   margin-bottom: 50px;
 }
 
-.btn-custom {
+.btn-custom,#menu .nav-tabs {
   background-color: #4b244a;
   color: #e3dfff;
 }
 
+#menu a {
+  color: #e3dfff;
+}
+#menu .nav-tabs .nav-link.active {
+  background-color:#e3dfff;
+  color:#4b244a;
+}
+
+
+#ourLocation {
+  padding-bottom: 1rem;
+  color: #e3dfff;
+  font-size: 1.2rem;
+}
+
+#ourLocation strong {
+  font-size: 2rem;
+  font-family: 'solid_antique_roman', Arial;
+}
+
+.btn.btn-outline-secondary{
+  background-color: #4b244a;
+}
 
 @media(min-width:992px){
 
@@ -82,6 +112,3 @@ section:nth-of-type(even){
 .navbar li {
   list-style: none;
 }
-
-
-
