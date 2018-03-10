@@ -17,7 +17,7 @@
           }).appendTo( "#" +file+" table" );
         });}
 
-		function drinksMenuTable(file) {
+		function shortMenuTable(file) {
 			$.getJSON("js/data/" +file+".json", function( data ) {
           var items = [];
 		  $.each( data, function( key, val ) {
@@ -29,3 +29,21 @@
 		    html: items.join( "" )
 		  }).appendTo( "#" +file+" table" );
 		});}
+
+    function kidsMenuTable(file) {
+        $.getJSON("js/data/" +file+".json", function( data ) {
+        var items = [];
+        $.each( data, function( key, val ) {
+          if (val.else==="true") {
+            items.push( "<tr><td>" + val.name + "</td></tr><td> ou </td></tr>" );
+          }
+          else {
+            items.push( "<tr><td>" + val.name + "</td></tr>" );  
+          }
+        });
+       
+        $( "<table/>", {
+          "class": "my-new-table",
+          html: items.join( "" )
+        }).appendTo( "#" +file+" table" );
+      });}
