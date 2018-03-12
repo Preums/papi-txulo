@@ -122,9 +122,9 @@ section:nth-of-type(even){
 }
 
 .modal-body {
-background-image: url("../img/cornerTL.png"), url("../img/sideX.png"), url("../img/cornerTR.png"), url("../img/sideY.png"), url("../img/cornerBR.png"), url("../img/sideX.png"), url("../img/cornerBL.png"), url("../img/sideY.png");
-background-position: top left, top left 22px, top right, right, bottom right, bottom, bottom left, left;
-background-repeat: no-repeat, repeat-x, no-repeat, repeat-y, no-repeat, repeat-x, no-repeat,repeat-y;
+background-image: url("../img/cornerTL.png"), url("../img/cornerTR.png"), url("../img/cornerBR.png"), url("../img/cornerBL.png"), url("../img/sideX.png"), url("../img/sideY.png"), url("../img/sideX.png"), url("../img/sideY.png");
+background-position: top left, top right, bottom right, bottom left, top left, top right, bottom right, bottom left;
+background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat-x, repeat-y, repeat-x,repeat-y;
 margin: 20px;
 }
 
