@@ -1,8 +1,6 @@
 
         function menuTable(file) {
-        	$.getJSON("js/data/" +file+".json", function( data, status, xhr ) {
-            console.log(status);
-            console.log(xhr);
+        	$.getJSON("js/data/" +file+".json", function( data ) {
           var items = [];
           $.each( data, function( key, val ) {
             if (val.vegetarian==="true") {

@@ -107,6 +107,20 @@ section:nth-of-type(even){
   margin-right: -15px;
 }
 
+#menu .dropdown-menu {
+  background-color: #4b244a;
+
+}
+
+#menu .dropdown-item {
+  color: #e3dfff;
+}
+
+#menu .dropdown-item:hover, #menu .dropdown-item:focus {
+  background-color: #e3dfff;
+  color: #4b244a;
+}
+
 .modal-body {
 background-image: url("../img/cornerTL.png"), url("../img/sideX.png"), url("../img/cornerTR.png"), url("../img/sideY.png"), url("../img/cornerBR.png"), url("../img/sideX.png"), url("../img/cornerBL.png"), url("../img/sideY.png");
 background-position: top left, top left 22px, top right, right, bottom right, bottom, bottom left, left;
