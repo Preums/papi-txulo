@@ -42,8 +42,14 @@ body {
   margin-left: 0;
 }
 
-.carousel-caption {
-    background: rgba(0, 0, 0, 0.5);
+.carousel-caption h2{
+    text-shadow: 1px 1px black;
+}
+
+.carousel-caption h2{
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: initial;
 }
 
 section:nth-of-type(odd){
@@ -65,9 +71,11 @@ section:nth-of-type(even){
   margin-bottom: 50px;
 }
 
+
 .btn-custom {
   background-color: #4b244a;
   color: #e3dfff;
+  border: solid 1px #574a54;
 }
 
 .btn.btn-outline-secondary{
