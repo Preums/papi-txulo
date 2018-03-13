@@ -150,3 +150,8 @@ margin: 20px;
 .navbar li {
   list-style: none;
 }
+
+footer {
+  color: #e3dfff;
+  text-align: right;
+}
