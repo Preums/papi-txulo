@@ -20,6 +20,7 @@ h2, h3 {
 h2 {
   margin-top: 1rem;
   font-size: 3rem;
+  margin-bottom: 88px;
 }
 
 h3 {
@@ -28,9 +29,11 @@ h3 {
 }
 
 body {
-  padding-top: 88px;
   background-color: #42253B;
   font-size: 14px;
+}
+section:not(#evenements) {
+  padding-top: 88px;
 }
 
 .logo_nav_right{
@@ -106,6 +109,7 @@ section:nth-of-type(even){
 }
 
 #menu ul {
+  margin-bottom: 88px;
   background-color: #888098;
   color: #42253B;
   margin-left: -15px;
