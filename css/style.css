@@ -150,6 +150,11 @@ margin: 20px;
   font-family: 'solid_antique_roman', Arial;
 }
 
+#ourLocation a {
+  text-decoration: none;
+  color: #e3dfff;
+}
+
 @media(min-width:992px){
 
   #concept .btn {
