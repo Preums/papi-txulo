@@ -32,7 +32,7 @@ body {
   background-color: #42253B;
   font-size: 14px;
 }
-section:not(#evenements) {
+section {
   padding-top: 88px;
 }
 
@@ -144,6 +144,12 @@ background-image: url("../img/cornerTL.png"), url("../img/cornerTR.png"), url(".
 background-position: top left, top right, bottom right, bottom left, top left, top right, bottom right, bottom left;
 background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat-x, repeat-y, repeat-x,repeat-y;
 margin: 20px;
+}
+
+/* ###################################### evenements ######################################  */
+
+#evenements {
+  background-color: #888098;
 }
 
 /* ###################################### ourLocation ######################################  */
