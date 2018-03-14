@@ -45,6 +45,12 @@ section:not(#evenements) {
   margin-left: 0;
 }
 
+.flag {
+  margin-left: 1rem;
+  height: 2rem;
+  width: 2rem;
+}
+
 /* ###################################### Carousel ######################################  */
 
 .carousel-caption h2{
