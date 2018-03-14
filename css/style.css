@@ -45,6 +45,12 @@ section:not(#evenements) {
   margin-left: 0;
 }
 
+.flag {
+  margin-left: 1rem;
+  height: 2rem;
+  width: 2rem;
+}
+
 /* ###################################### Carousel ######################################  */
 
 .carousel-caption h2{
@@ -148,6 +154,11 @@ margin: 20px;
 #ourLocation strong {
   font-size: 2rem;
   font-family: 'solid_antique_roman', Arial;
+}
+
+#ourLocation a {
+  text-decoration: none;
+  color: #e3dfff;
 }
 
 @media(min-width:992px){
