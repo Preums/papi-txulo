@@ -36,6 +36,9 @@ section:not(#evenements) {
   padding-top: 88px;
 }
 
+footer{
+  color: white;
+}
 .logo_nav_right{
   padding-right: 20px;
   padding-top: 3px;
@@ -192,4 +195,8 @@ margin: 20px;
 }
 #legalMentions h6, #legalMentions p {
   padding-left: 15px;
+}
+
+#Contact{
+  padding-bottom: 2rem;
 }
