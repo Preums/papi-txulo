@@ -20,6 +20,7 @@ h2, h3 {
 h2 {
   margin-top: 1rem;
   font-size: 3rem;
+  margin-bottom: 88px;
 }
 
 h3 {
@@ -28,9 +29,11 @@ h3 {
 }
 
 body {
-  padding-top: 88px;
   background-color: #42253B;
   font-size: 14px;
+}
+section:not(#evenements) {
+  padding-top: 88px;
 }
 
 .logo_nav_right{
@@ -41,6 +44,8 @@ body {
 .navbar-nav.nav-fill.w-100.align-items-start {
   margin-left: 0;
 }
+
+/* ###################################### Carousel ######################################  */
 
 .carousel-caption h2{
     text-shadow: 1px 1px black;
@@ -62,6 +67,7 @@ section:nth-of-type(even){
   color: #42253B;
 }
 
+/* ###################################### Concept ######################################  */
 
 #concept img {
   margin-top: 15px;
@@ -83,6 +89,8 @@ section:nth-of-type(even){
   background-color: #4b244a;
 }
 
+/* ###################################### Menu ######################################  */
+
 #menu a {
   color: #e3dfff;
 }
@@ -101,6 +109,7 @@ section:nth-of-type(even){
 }
 
 #menu ul {
+  margin-bottom: 88px;
   background-color: #888098;
   color: #42253B;
   margin-left: -15px;
@@ -128,6 +137,8 @@ background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat-x, repeat-
 margin: 20px;
 }
 
+/* ###################################### ourLocation ######################################  */
+
 #ourLocation {
   padding-bottom: 1rem;
   color: #e3dfff;
@@ -150,8 +161,24 @@ margin: 20px;
 .navbar li {
   list-style: none;
 }
-
-footer {
+ .Contact th {
+  font-family: 'solid_antique_roman', Arial;
+  font-size: 1.5em;
+  text-decoration: underline;
+}
+/* ###################################### footer ######################################  */
+#copyright {
   color: #e3dfff;
   text-align: right;
+}
+#copyright h6, #copyright p {
+  padding-right: 15px;
+}
+
+#legalMentions {
+  color: #e3dfff;
+  text-align: left;
+}
+#legalMentions h6, #legalMentions p {
+  padding-left: 15px;
 }
