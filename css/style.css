@@ -48,8 +48,12 @@ footer{
   margin-left: 0;
 }
 
+.collapse.navbar-collapse.align-items-center .nav-link {
+  font-size: 1.3rem;
+}
+
 .flag {
-  margin-left: 1rem;
+  margin-left: 0.5rem;
   height: 2rem;
   width: 2rem;
 }
