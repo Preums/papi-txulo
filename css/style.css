@@ -23,6 +23,12 @@ h2 {
   margin-bottom: 88px;
 }
 
+section > header > h2 {
+  padding: 10px 20px 10px 10px;
+  border: solid 0.35rem #42253B;
+  color: #42253B;
+}
+
 h3 {
 
   font-size: 2rem;
@@ -122,7 +128,6 @@ section:nth-of-type(even){
 }
 
 #menu ul {
-  margin-bottom: 88px;
   background-color: #888098;
   color: #42253B;
   margin-left: -15px;
@@ -150,11 +155,13 @@ background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat-x, repeat-
 margin: 20px;
 }
 
+.logo-menu {
+  max-width: 50%;
+}
+
 /* ###################################### evenements ######################################  */
 
-#evenements {
-  background-color: #888098;
-}
+
 
 /* ###################################### ourLocation ######################################  */
 
@@ -172,14 +179,6 @@ margin: 20px;
 #ourLocation a {
   text-decoration: none;
   color: #e3dfff;
-}
-
-@media(min-width:992px){
-
-  #concept .btn {
-    margin-bottom: 20px;
-  }
-
 }
 
 .navbar li {
@@ -209,4 +208,18 @@ margin: 20px;
 
 #Contact{
   padding-bottom: 2rem;
+}
+
+/* ################################# Media Queries ##################################### */
+
+@media(min-width:992px){
+
+  #concept .btn {
+    margin-bottom: 20px;
+  }
+
+  #concept .btn {
+    margin-bottom: 20px;
+  }
+
 }

@@ -180,7 +180,7 @@
 <!-- #                        Slider                        # -->
 <!-- ######################################################## -->
 
-<section id="banner">
+<section id="banner" class="container-fluid">
   <div class="row bg-dark">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -263,6 +263,10 @@
 ###############################################################################################################################-->
 <section id="menu" class="container-fluid">
 
+  <header class="row">
+      <h2 class="mx-auto">Our menus</h2>
+  </header>
+
  <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item">
     <a class="nav-link active" id="mainMenu-tab" data-toggle="tab" href="#mainMenu" role="tab" aria-controls="mainMenu" aria-selected="true"><h3>Menu</h3></a>
@@ -279,10 +283,10 @@
   <div class="tab-pane fade show active" id="mainMenu" role="tabpanel" aria-labelledby="mainMenu-tab">
   <article>
   <header class="row">
-    <div class="col-12 col-lg-4">
+    <div class="col-12 col-lg-4 pt-5">
       <img src="img/menu.jpg" alt="Fish and chips picture" class="img-fluid">
     </div>
-    <div class="col-12 col-lg-8">
+    <div class="col-12 col-lg-8 pt-5">
       <img src="img/flyingPig.png" alt="Logo of a flying pig">
       <h2>Taste our fresh products</h2>
       <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#starters">
@@ -440,10 +444,10 @@
 <div class="tab-pane fade" id="drinksMenu" role="tabpanel" aria-labelledby="drinksMenu-tab">
 <article>
 <header class="row">
-  <div class="col-12 col-lg-4">
+  <div class="col-12 col-lg-4 pt-5">
     <img src="img/drinks.jpg" alt="cocktails picture" class="img-fluid">
   </div>
-  <div class="col-12 col-lg-8">
+  <div class="col-12 col-lg-8 pt-5">
     <img src="img/drinks.png" alt="Logo of a beer glass">
     <h2>Take a glass</h2>
      <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#cocktails">
@@ -728,10 +732,10 @@ Nunc lacinia iaculis cursus. Mauris a porttitor purus. Etiam commodo neque eget 
   <div class="tab-pane fade" id="brunchMenu" role="tabpanel" aria-labelledby="brunchMenu-tab">
   <article>
     <header class="row">
-      <div class="col-12 col-lg-4">
+      <div class="col-12 col-lg-4 pt-5">
         <img src="img/brunch.jpg" alt="brunch picture" class="img-fluid">
       </div>
-      <div class="col-12 col-lg-8">
+      <div class="col-12 col-lg-8 pt-5">
         <img src="img/brunchLogo.png" alt="Logo for brunch time">
         <h2>Have a rest on sunday</h2>
         <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#brunch">
@@ -837,7 +841,7 @@ Nunc lacinia iaculis cursus. Mauris a porttitor purus. Etiam commodo neque eget 
                 menuTable("dessertsBrunch");
              </script>
               <div class="modal-footer">
-            <img src="img/TextLogo.png" alt="The Market Tavern Logo" class="mr-auto">
+                <img src="img/TextLogo.png" alt="The Market Tavern Logo" class="mr-auto logo-menu">
                 <button type="button" class="btn btn-custom-secondary" data-dismiss="modal">Close</button>
               </div>
             </div>
@@ -866,7 +870,11 @@ Nunc lacinia iaculis cursus. Mauris a porttitor purus. Etiam commodo neque eget 
 <!-- #                   Carousel Events                    # -->
 <!-- ######################################################## -->
 
-<section id="evenements">
+<section id="evenements" class="container-fluid">
+
+  <header class="row">
+      <h2 class="mx-auto">Our Events</h2>
+  </header>
 
   <div class="row bg-dark">
 <div id="carouselevents" class="carousel slide" data-ride="carousel">
@@ -878,13 +886,15 @@ Nunc lacinia iaculis cursus. Mauris a porttitor purus. Etiam commodo neque eget 
     <div class="carousel-item active">
       <img class="d-block w-100" src="img/eventsSlider1.jpg" alt="Amis heureux">
           <div class="carousel-caption d-none d-md-block">
-          <button type="button" class="btn btn-custom" data-toggle="modal" data-target=".bd-example-modal-lg">Events this week</button>
+            <h2>Events this week</h2>
+            <button type="button" class="btn btn-custom" data-toggle="modal" data-target=".bd-example-modal-lg">See more...</button>
           </div>
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src="img/eventsSlider2.jpg" alt="british rugby national team">
           <div class="carousel-caption d-none d-md-block">
-          <button type="button" class="btn btn-custom" data-toggle="modal" data-target=".bd-example1-modal-lg">Live sports</button>
+            <h2>Live sport</h2>
+            <button type="button" class="btn btn-custom" data-toggle="modal" data-target=".bd-example1-modal-lg">See more...</button>
           </div>
     </div>
   </div>
@@ -932,7 +942,7 @@ Nunc lacinia iaculis cursus. Mauris a porttitor purus. Etiam commodo neque eget 
     <div class="col-12 col-md-6">
     <a href="https://www.google.fr/maps/place/The+Market+Tavern/@44.8525534,-0.5744692,17z/data=!3m1!4b1!4m5!3m4!1s0xd552879c241f0a7:0xb03531d05a62180!8m2!3d44.8525534!4d-0.5722752?hl=fr"><img class="img-fluid img-thumbnail" src="img/ourLocation2.jpg" alt="Location map"/></a>
   </div>
-  <p class="text-center"><strong>The Market Tavern</strong><br/>15 Rue Rode<br/>33000 Bordeaux</p>
+  <p class="text-center pt-3"><strong>The Market Tavern</strong><br/>15 Rue Rode<br/>33000 Bordeaux</p>
   </div>
 </section>
 
@@ -940,6 +950,10 @@ Nunc lacinia iaculis cursus. Mauris a porttitor purus. Etiam commodo neque eget 
 <!-- #                    Contact                      # -->
 <!-- ######################################################## -->
 <section id="Contact" class="container-fluid">
+
+  <header class="row">
+      <h2 class="mx-auto">Contact Us</h2>
+  </header>
 
  <div class="row">
 
@@ -951,15 +965,6 @@ Nunc lacinia iaculis cursus. Mauris a porttitor purus. Etiam commodo neque eget 
   <div class="col-lg-5 col-md-12">
     <!-- Form contact -->
 <form>
-    <p class="h4 text-center mb-4">Sign up</p>
-
-    <!-- Material input text -->
-    <div class="md-form">
-        <i class="fa fa-user prefix grey-text"></i>
-        <input type="text" id="materialFormRegisterNameEx" class="form-control">
-        <label for="materialFormRegisterNameEx">Your name</label>
-    </div>
-
     <!-- Material input email -->
     <form class="p-5">
       <div class="md-form form-sm"> <i class="fa fa-user prefix grey-text"></i>
