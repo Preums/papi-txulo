@@ -23,6 +23,6 @@ Cet affichage à été réalisé:
 * par chargement dynamique de fichiers JSON
 
 ### Contributeurs
-* [Jérôme(https://github.com/papibuzz)]
-* [Orhan(https://github.com/DadOrhan)]
+* Jérôme https://github.com/papibuzz
+* Orhan https://github.com/DadOrhan
 * Frédéric chene
